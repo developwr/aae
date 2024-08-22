@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Eventify Pitch Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: 600;
+            color: #0A7373;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #0A7373;
+            margin-bottom: 25px;
+        }
+
+        p, li {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #E7F9F9;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #0A7373;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #D6F5F5;
+        }
+
+        .details {
+            display: none;
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        .details.active {
+            display: block;
+        }
+
+        .back-button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #0A7373;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #085A5A;
+        }
+
+        .back-button.active {
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eventify Pitch Deck</h1>
+
+        <div id="welcome-message">
+            <h2>Welcome to Our Website</h2>
+            <img src="Welcome .jpeg" alt="Welcome Image">
+        </div>
+
+        <ul id="key-points" style="display: none;">
+            <li onclick="showDetails('problem')">Problem</li>
+            <li onclick="showDetails('solution')">Solution</li>
+            <li onclick="showDetails('market')">Market Size & Opportunity</li>
+            <li onclick="showDetails('product')">Product</li>
+            <li onclick="showDetails('team')">Team</li>
+            <li onclick="showDetails('competition')">Competition</li>
+            <li onclick="showDetails('financials')">Financials</li>
+        </ul>
+
+        <!-- Detail Sections -->
+        <div id="problem" class="details">
+            <h2>Problem</h2>
+            <img src="event.jpeg" alt="Problem Image">
+            <p>Planning an event can be overwhelming, with multiple vendors, services, and details to manage. This often leads to stress, time inefficiency, and budget overruns.</p>
+        </div>
+
+        <div id="solution" class="details">
+            <h2>Solution</h2>
+            <img src="Solutions.jpg" alt="Solution Image">
+            <p><strong>Eventify</strong> simplifies event planning by offering a comprehensive platform where users can customize event packages, hire vendors, and manage all aspects of their event in one place.</p>
+        </div>
+
+        <div id="market" class="details">
+            <h2>Market Size & Opportunity</h2>
+            <img src="Mak.jpeg" alt="Market Image">
+            <p>The global event management industry is projected to reach $1.5 trillion by 2028, with increasing demand for personalized and digital event planning solutions.</p>
+        </div>
+
+        <div id="product" class="details">
+            <h2>Product</h2>
+            <img src="Product .jpeg" alt="Product Image">
+            <p><strong>Eventify</strong> offers customizable event packages, a marketplace of verified vendors, virtual venue tours, and integrated event planning tools—all accessible through a user-friendly interface.</p>
+        </div>
+
+        <div id="team" class="details">
+            <h2>Team</h2>
+            <img src="Team.jpg" alt="Team Image">
+            <ul>
+                <li><strong>Naeem Ahmad</strong> - CEO & Co-Founder (15+ years in event management)</li>
+                <li><strong>Anisha Haroon</strong> - CTO & Co-Founder (Tech entrepreneur with expertise in AI)</li>
+                <li><strong>Ali Mubashir</strong> - Head of Partnerships (Former VP at a major event planning firm)</li>
+            </ul>
+        </div>
+
+        <div id="competition" class="details">
+            <h2>Competition</h2>
+            <img src="Competition.jpg" alt="Competition Image">
+            <p>Eventify competes with traditional event planners and other digital platforms, but differentiates itself through its comprehensive service offerings, personalized event planning tools, and a wide network of local vendors.</p>
+        </div>
+
+        <div id="financials" class="details">
+            <h2>Financials</h2>
+            <img src="Financials12.jpeg" alt="Financials Image">
+            <p>Projected revenue for the first year is $8 million, with a 60% year-over-year growth rate. Initial funding of $3 million is required to scale operations, develop the platform further, and expand vendor partnerships.</p>
+        </div>
+
+        <!-- Back Button -->
+        <button id="back-button" class="back-button" onclick="showKeyPoints()">Back</button>
+    </div>
+
+    <script>
+        // Show welcome message first, then key points
+        setTimeout(() => {
+            document.getElementById('welcome-message').style.display = 'none';
+            document.getElementById('key-points').style.display = 'block';
+        }, 2000);
+
+        // Function to show details of each key point
+        function showDetails(id) {
+            const details = document.querySelectorAll('.details');
+            details.forEach(detail => detail.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            document.getElementById('key-points').style.display = 'none';
+            document.getElementById('back-button').classList.add('active');
+        }
+
+        // Function to show key points again and hide the detail
+        function showKeyPoints() {
+            const details = document.querySelectorAll('.details');
+            details.forEach(detail => detail.classList.remove('active'));
+
+            document.getElementById('key-points').style.display = 'block';
+            document.getElementById('back-button').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
